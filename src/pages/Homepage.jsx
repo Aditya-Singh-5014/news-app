@@ -35,8 +35,9 @@ const HomePage = () => {
   );
 
   const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
-    document.body.className = theme === "light" ? "dark-mode" : "light-mode";
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    document.body.className = newTheme === "light" ? "light-mode" : "dark-mode";
   };
 
   return (
